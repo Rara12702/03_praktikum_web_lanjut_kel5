@@ -36,3 +36,7 @@ Route::get('/home', function(){
         Route::get('/team', function(){
             return view('ourTeam');
         });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
